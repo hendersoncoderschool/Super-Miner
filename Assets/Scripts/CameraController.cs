@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     public float lerpSpeed;
     public float yTop;
     public float yBottom;
-    private bool scrolling;
+    public bool scrolling;
     public void moveCamera(Vector3 destination, bool direction){
         scrolling = true;
         StartCoroutine(lerpCam(destination, direction));

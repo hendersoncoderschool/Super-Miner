@@ -530,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &348321923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,13 +717,14 @@ GameObject:
   - component: {fileID: 483975329}
   - component: {fileID: 483975328}
   - component: {fileID: 483975330}
+  - component: {fileID: 483975331}
   m_Layer: 0
   m_Name: Boulder3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &483975328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -764,7 +765,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1fd320fc0a87044c8383a18e9bb4a1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -836,6 +837,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.35}
   m_EdgeRadius: 0
+--- !u!114 &483975331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483975327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85749fd60c7754b92fb5a246ca9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000000
+  GemSpawn2: {fileID: 0}
+  Door1_2: {fileID: 0}
 --- !u!1 &486954977
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1004,7 @@ MonoBehaviour:
   lerpSpeed: 35
   yTop: 3
   yBottom: -1
+  scrolling: 0
 --- !u!1 &524518785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +1118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4327ae9a16d7c4b88aed7592a7a9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ore: {fileID: 4861299414377601345, guid: d8f1987aa157ddb45936209896f7c162, type: 3}
+  onyx: {fileID: 4861299414377601345, guid: d8f1987aa157ddb45936209896f7c162, type: 3}
+  agate: {fileID: 3604877922102918225, guid: 9f9ad60c0c2207c4a8389eb039a6ee8f, type: 3}
+  citrine: {fileID: 6126021673796485412, guid: ff6333b011ebeb74a9eb1150e07990ef, type: 3}
+  garnet: {fileID: 1930994609594633146, guid: 9910b1bfe7ea3234fbd0913f2fd43996, type: 3}
 --- !u!4 &526791381
 Transform:
   m_ObjectHideFlags: 0
@@ -1128,13 +1148,14 @@ GameObject:
   - component: {fileID: 589124083}
   - component: {fileID: 589124082}
   - component: {fileID: 589124084}
+  - component: {fileID: 589124085}
   m_Layer: 0
   m_Name: Boulder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &589124082
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1175,7 +1196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1fd320fc0a87044c8383a18e9bb4a1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1247,6 +1268,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.35}
   m_EdgeRadius: 0
+--- !u!114 &589124085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589124081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85749fd60c7754b92fb5a246ca9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10000
+  GemSpawn2: {fileID: 0}
+  Door1_2: {fileID: 612694920}
 --- !u!1 &612694920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,13 +1386,14 @@ GameObject:
   - component: {fileID: 696262479}
   - component: {fileID: 696262478}
   - component: {fileID: 696262480}
+  - component: {fileID: 696262481}
   m_Layer: 0
   m_Name: Boulder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &696262478
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1397,7 +1434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1fd320fc0a87044c8383a18e9bb4a1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1469,6 +1506,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.35}
   m_EdgeRadius: 0
+--- !u!114 &696262481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696262477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85749fd60c7754b92fb5a246ca9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  GemSpawn2: {fileID: 1133548941}
+  Door1_2: {fileID: 1647457260}
 --- !u!1 &708090367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1589,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &734839164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 734839166}
+  - component: {fileID: 734839165}
+  m_Layer: 0
+  m_Name: GemSpawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &734839165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734839164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f70b4e093b60c5499d5be617aa11a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sapphire: {fileID: 7127200823492884079, guid: fc8e62aaff2bf084e86188b21988f434, type: 3}
+  diamond: {fileID: 816704019865322222, guid: 38ad16bf595a49a4db18bac73ce7e9ff, type: 3}
+  amethyst: {fileID: 2854447119227279036, guid: 08a914af59db1924fbdb33b6f1dcd6fa, type: 3}
+  fluorite: {fileID: 1032683631425656547, guid: 2bce908350409614eb10be0b979b037e, type: 3}
+--- !u!4 &734839166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734839164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.669035, y: -14.328485, z: 1.897574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753270560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1663,7 @@ RectTransform:
   m_GameObject: {fileID: 753270560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1617100032}
@@ -1621,8 +1721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 305, y: 183}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 522, y: 230}
+  m_SizeDelta: {x: 228.1904, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808064250
 MonoBehaviour:
@@ -1707,7 +1807,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -82.2471, y: 0, z: 0, w: 0}
+  m_margin: {x: -82.2471, y: 0, z: 182.49744, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11504,6 +11604,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113575125}
   m_CullTransparentMesh: 1
+--- !u!1 &1133548941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133548943}
+  - component: {fileID: 1133548942}
+  m_Layer: 0
+  m_Name: GemSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1133548942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133548941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7b3b315d6b8d9488d9429abdab3b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jadeite: {fileID: 5226771187956111398, guid: eeba197c30b6959408a500c505ce73e9, type: 3}
+  ruby: {fileID: 6181264167710216281, guid: 7dd8f16a85af3884887546d764256e0c, type: 3}
+  aquamarine: {fileID: 1547236916221709993, guid: d2edc92abf4e1ea4d9106c863a399f05, type: 3}
+--- !u!4 &1133548943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133548941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.533402, y: 0.710535, z: 1.919157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434424402
 GameObject:
   m_ObjectHideFlags: 0
@@ -11514,6 +11661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434424404}
   - component: {fileID: 1434424403}
+  - component: {fileID: 1434424405}
   m_Layer: 0
   m_Name: Upgrades
   m_TagString: Untagged
@@ -11581,6 +11729,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1434424405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434424402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a082395096a5cfb4cb01dec55397a9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 348321922}
+  gameCam: {fileID: 519420033}
 --- !u!1 &1449961320
 GameObject:
   m_ObjectHideFlags: 0
@@ -13881,6 +14043,8 @@ SceneRoots:
   - {fileID: 589124083}
   - {fileID: 483975329}
   - {fileID: 526791381}
+  - {fileID: 1133548943}
+  - {fileID: 734839166}
   - {fileID: 486954979}
   - {fileID: 348321926}
   - {fileID: 708090370}
