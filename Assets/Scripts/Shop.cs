@@ -10,8 +10,11 @@ public class Shop : MonoBehaviour
     private void OnMouseDown()
     {
         print("done");
-        shop.SetActive(true);
-        gameCam.scrolling = true;
+        if (!GameObject.Find("Main Camera").GetComponent<CameraController>().scrolling)
+        {
+            shop.SetActive(true);
+            gameCam.scrolling = true;
+        }
     }
     void Start()
     {

@@ -7,9 +7,9 @@ public class DoorTransition : MonoBehaviour
     public bool direction;
     public Vector3 destination;
     private void OnMouseDown(){
-        print("done");
-    GameObject.Find("Main Camera").GetComponent<CameraController>().moveCamera(
-        destination, direction);
+        //print("done");
+        if (!GameObject.Find("Main Camera").GetComponent<CameraController>().scrolling)
+            GameObject.Find("Main Camera").GetComponent<CameraController>().moveCamera(destination, direction);
     }
     // Start is called before the first frame update
     void Start()

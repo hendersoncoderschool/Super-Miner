@@ -22,6 +22,7 @@ public class Ore : MonoBehaviour
         health -= 1;
         print(health);
         if(health <= 0){
+            GameObject.Find("Inventory").GetComponent<Inventory>().addToInventory(type);
             Destroy(gameObject);
         }
     }
