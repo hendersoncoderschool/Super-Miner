@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -28,10 +29,20 @@ public class Inventory : MonoBehaviour
             money += Values[item] * inventory[item];
             inventory[item] = 0;
         }
-        print(money);
+        GameObject.Find("Money").GetComponent<TextMeshProUGUI>().text = "$" + money.ToString();
     }
 
-    void Start()
+    public void MouseHover()
+    {
+        int val = 0;
+        foreach (var item in new List<string>(inventory.Keys))
+        {
+            val += Values[item] * inventory[item];
+        }
+        GameObject.Find("Value").GetComponent<TextMeshProUGUI>().text = "$" + val.ToString();
+    }
+
+        void Start()
     {
         inventory = new Dictionary<string, int>{
             {"onyx", 0}, //1
