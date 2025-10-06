@@ -6,10 +6,11 @@ public class Ore : MonoBehaviour
 {
     public int health;
     public string type;
+    public GameObject Inventory;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Inventory = GameObject.Find("Inventory");
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class Ore : MonoBehaviour
     }
 
     void OnMouseDown(){
-        health -= 1;
+        health -= (int)Mathf.Pow(2f, (float)Inventory.GetComponent<Inventory>().pickaxelv - 1f);
         print(health);
         if(health <= 0){
             GameObject.Find("Inventory").GetComponent<Inventory>().addToInventory(type);

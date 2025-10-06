@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     Dictionary<string, int> Values;
     public int money;
     public int pickaxelv;
+    public int cost;
     /*public int Money;
     public int PickaxeLv;
     public int Onyx;
@@ -32,6 +33,18 @@ public class Inventory : MonoBehaviour
         GameObject.Find("Money").GetComponent<TextMeshProUGUI>().text = "$" + money.ToString();
     }
 
+    public void UpgradePickaxe()
+    {
+        if (money >= cost)
+            {
+            money -= cost;
+            pickaxelv += 1;
+            GameObject.Find("Money").GetComponent<TextMeshProUGUI>().text = "$" + money.ToString();
+            cost *= 2;
+            GameObject.Find("Cost").GetComponent<TextMeshProUGUI>().text = "$" + cost.ToString();
+        }
+    }
+
     public void MouseHover()
     {
         int val = 0;
@@ -41,9 +54,15 @@ public class Inventory : MonoBehaviour
         }
         GameObject.Find("Value").GetComponent<TextMeshProUGUI>().text = "$" + val.ToString();
     }
-
-        void Start()
+    public void MouseLoom()
     {
+        GameObject.Find("Cost").GetComponent<TextMeshProUGUI>().text = "$" + cost.ToString();
+    }
+
+    void Start()
+    {
+        //GameObject.Find("Money").GetComponent<TextMeshProUGUI>().text = "$" + money.ToString();
+        cost = 50;
         inventory = new Dictionary<string, int>{
             {"onyx", 0}, //1
             {"agate", 0}, //2
