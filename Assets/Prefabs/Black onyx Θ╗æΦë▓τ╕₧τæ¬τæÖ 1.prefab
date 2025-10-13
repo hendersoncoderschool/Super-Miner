@@ -136,3 +136,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   type: onyx
+  Inventory: {fileID: 0}
+  sparkEffect: {fileID: 3986204807137002436, guid: 038a7a3a979069042bf189c5d3271e7c, type: 3}

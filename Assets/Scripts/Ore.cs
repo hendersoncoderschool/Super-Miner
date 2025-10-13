@@ -7,6 +7,7 @@ public class Ore : MonoBehaviour
     public int health;
     public string type;
     public GameObject Inventory;
+    public GameObject sparkEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +27,8 @@ public class Ore : MonoBehaviour
             GameObject.Find("Inventory").GetComponent<Inventory>().addToInventory(type);
             Destroy(gameObject);
         }
+        Vector3 mousePositionWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePositionWorld.z = -5;
+        Instantiate(sparkEffect, mousePositionWorld, Quaternion.identity);
     }
 }
